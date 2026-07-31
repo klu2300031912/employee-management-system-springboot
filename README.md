@@ -1,24 +1,31 @@
-# Employee Management System
+# 👥 Employee Management System
 
-A full-stack Employee Management application built with **Spring Boot** (backend) and **React** (frontend).
+A full-stack Employee Management application built with **Spring Boot** (backend) and **React + Vite** (frontend).
 
-## Features
-- Add new employees
-- View all employees
-- Update employee details
-- Delete employees
+## 🚀 Live Features
+- 🔐 Login Page with role-based access (Admin / HR Manager)
+- ➕ Add, Edit, Delete, View Employees
+- 🔍 Search by name or email
+- 🏢 Filter by department
+- 📊 Department Pie Chart (Analytics)
+- 📁 Export employees to CSV
+- 🌙 Dark Mode toggle
+- 📈 Stats Dashboard (Total, Departments, Avg Salary)
+- 👤 Avatar initials & department badges
+- 📱 Responsive Design
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-| Layer     | Technology              |
-|-----------|-------------------------|
-| Backend   | Java 17, Spring Boot 3  |
-| Database  | MySQL                   |
-| ORM       | Spring Data JPA         |
-| Frontend  | React 18, Axios         |
-| Build     | Maven                   |
+| Layer     | Technology                        |
+|-----------|-----------------------------------|
+| Backend   | Java 17, Spring Boot 3            |
+| Database  | MySQL                             |
+| ORM       | Spring Data JPA / Hibernate       |
+| Frontend  | React 18, Vite, Axios             |
+| Charts    | Recharts                          |
+| Build     | Maven                             |
 
-## API Endpoints
+## 📡 API Endpoints
 
 | Method | URL               | Description         |
 |--------|-------------------|---------------------|
@@ -28,31 +35,42 @@ A full-stack Employee Management application built with **Spring Boot** (backend
 | PUT    | /employees/{id}   | Update employee     |
 | DELETE | /employees/{id}   | Delete employee     |
 
-## How to Run
+## 🔐 Demo Credentials
+
+| Username | Password  | Role        |
+|----------|-----------|-------------|
+| admin    | admin123  | Admin       |
+| hr       | hr123     | HR Manager  |
+
+## ▶️ How to Run
 
 ### Backend (Spring Boot)
 1. Make sure MySQL is running
-2. Update `src/main/resources/application.properties` with your MySQL password
-3. Run the app:
+2. Update `backend/src/main/resources/application.properties`:
+```
+spring.datasource.password=your_mysql_password
+```
+3. Run:
 ```bash
 cd backend
 mvn spring-boot:run
 ```
-Backend runs on: `http://localhost:8080`
+Backend runs on: `http://localhost:8081`
 
-### Frontend (React)
+### Frontend (React + Vite)
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
-Frontend runs on: `http://localhost:3000`
+Frontend runs on: `http://localhost:5173`
 
-## Project Structure
+## 📁 Project Structure
 ```
 employee-management-system/
 ├── backend/
 │   ├── src/main/java/com/employee/management/
+│   │   ├── config/CorsConfig.java
 │   │   ├── controller/EmployeeController.java
 │   │   ├── entity/Employee.java
 │   │   ├── repository/EmployeeRepository.java
@@ -61,7 +79,13 @@ employee-management-system/
 │   └── src/main/resources/application.properties
 └── frontend/
     └── src/
-        ├── App.js
+        ├── App.jsx
         ├── App.css
+        ├── Login.jsx
+        ├── Login.css
+        ├── DepartmentChart.jsx
         └── api.js
 ```
+
+## 👨‍💻 Author
+- GitHub: [@klu2300031912](https://github.com/klu2300031912)
